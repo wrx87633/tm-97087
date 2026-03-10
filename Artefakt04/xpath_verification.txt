@@ -1,0 +1,4 @@
+PROJEKT SELEKTORA:
+ID: layoutStable
+TAG: CheckBox
+STATUS: ZALICZONE

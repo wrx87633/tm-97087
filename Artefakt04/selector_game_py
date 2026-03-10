@@ -1,0 +1,48 @@
+import xml.etree.ElementTree as ET
+import glob
+import os
+
+def run_game():
+    print("\n=== INTERAKTYWNY KREATOR SELEKTORÓW ===")
+    print("Cel: Znajdź kombinację ID i TAG, która występuje tylko RAZ.\n")
+
+    target_id = input("1. Podaj wartość 'id' z raportu (np. btn_login): ").strip()
+    target_tag = input("2. Podaj wartość 'tag' z raportu (np. Button): ").strip()
+
+    matches = 0
+    ns = '{http://schemas.android.com/apk/res/android}'
+    
+    path = "../Artefakt02/decompiled_apk/res/layout/*.xml"
+    files = glob.glob(path)
+
+    if not files:
+        print(f"BŁĄD: Nie znaleziono plików XML w {path}")
+        return
+
+    for file in files:
+        try:
+            tree = ET.parse(file)
+            for elem in tree.iter():
+                node_id = elem.get(f'{ns}id', '')
+                node_tag = elem.tag.split('.')[-1] 
+
+                if target_id in node_id and target_tag == node_tag:
+                    matches += 1
+        except Exception:
+            continue
+
+    print(f"\n" + "="*40)
+    print(f"Wynik wyszukiwania: Znaleziono {matches} dopasowań.")
+
+    with open('xpath_verification.txt', 'w', encoding='utf-8') as f:
+        if matches == 1:
+            success_msg = ">>> STATUS: ZALICZONE! Twój selektor jest unikalny. <<<"
+            print(success_msg)
+            f.write(f"PROJEKT SELEKTORA:\nID: {target_id}\nTAG: {target_tag}\nSTATUS: ZALICZONE\n")
+        else:
+            fail_msg = f">>> STATUS: BŁĄD! Znaleziono {matches} zamiast 1. Musisz doprecyzować wybór. <<<"
+            print(fail_msg)
+            f.write(f"PROJEKT SELEKTORA:\nID: {target_id}\nTAG: {target_tag}\nSTATUS: BŁĄD (Maksymalna unikalność nieosiągnięta)\n")
+
+if __name__ == "__main__":
+    run_game()
