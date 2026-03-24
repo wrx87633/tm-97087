@@ -1,6 +1,6 @@
 # 🏦 RAPORT Z AUDYTU BEZPIECZEŃSTWA: APIDEMOS
-**Data:** 24.03.2026
-**Audytor:** Maciej 97087
+**Data:** 24.03.2026  
+**Audytor:** Maciej 97087  
 **Projekt:** Mobilny System Demonstracyjny (Android)
 
 ---

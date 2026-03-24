@@ -1,7 +1,7 @@
 # 🛡️ RAPORT ANALIZY WYCIEKÓW (SECRETS)
-**Student:** [Maciej Szczygiel]  
-**Indeks:** [97087]  
-**Data raportu:** [24-03-2026]  
+**Student:** Maciej  
+**Indeks:** 97087  
+**Data raportu:** 24-03-2026  
 
 ---
 

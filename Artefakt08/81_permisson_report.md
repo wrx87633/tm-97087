@@ -13,6 +13,6 @@ Z punktu widzenia bezpieczeństwa, najpoważniejszym problemem jest flaga `debug
 Zaleca się wdrożenie skryptu do procesu CI/CD (np. w Jenkins/GitHub Actions), który będzie automatycznie blokował buildy, jeśli `RiskyPermission.xml` wykaże flagę `debuggable="true"`.
 
 ####  Raport wykonanay przez:
-**Podpis:** Maciej Szczygiel, 97087
+**Podpis:** Maciej, 97087
 **Data:**  24.03.2026
  
