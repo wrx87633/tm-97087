@@ -1,6 +1,6 @@
 # 🛡️ RAPORT STABILNOŚCI I ODPORNOŚCI UI
 **Moduł:** Blok 7 - Gesty i Interakcje Systemowe
-**Tester:** [Maciej Szczygiel 97087]
+**Tester:** Maciej 97087
 
 ---
 
@@ -24,7 +24,7 @@
 1. **Płynność Gestów:** Przy bardzo szybkich gestach swipe (duration < 200ms) UI gubi klatki – zalecana optymalizacja renderowania list.
 2. **Resource Validation:** Należy dodać walidację kluczy w mapie selektorów przed startem testu, aby unikać błędów typu `BŁĄD: Brak klucza` w trakcie egzekucji.
 
-**Data audytu:** Np. 24-03-2026
+**Data audytu:** 24-03-2026
 **Status końcowy:** 🟢 SYSTEM STABILNY
-**Wykonał (Imię, Numer Studenta):** 
+**Wykonał Maciej, 97087**
  
